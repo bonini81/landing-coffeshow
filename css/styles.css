@@ -266,7 +266,7 @@ img.img-missing { display: none; }
   text-transform: uppercase;
   font-weight: 700;
 }
-.strip__text .dot { color: var(--orange); margin: 0 6px; }
+.strip__text .dot { color: var(--white); margin: 0 6px; }
 
 /* ==========================================================================
    PROGRAM
@@ -360,7 +360,7 @@ img.img-missing { display: none; }
   border-radius: var(--radius-md);
   overflow: hidden;
   aspect-ratio: 4 / 5;
-  background: #2a2a2a;
+  background: transparent;
 }
 .artist__photo img {
   width: 100%;
@@ -377,10 +377,14 @@ img.img-missing { display: none; }
 }
 
 .day .btn { margin-top: 28px; }
-.day__buenplan { width: 110px; margin: 12px auto 0; }
+.day__buenplan { width: 110px; margin: 18px auto 0; }
 
 @media (min-width: 900px) {
   .program__days {
+    background-image: url("../assets/img/fondo-coffeeShow.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
     grid-template-columns: 1fr 1fr;
     gap: 64px;
   }
@@ -509,7 +513,7 @@ img.img-missing { display: none; }
   gap: 20px;
   flex-wrap: wrap;
 }
-.organizers__logo { width: 150px; }
+.organizers__logo { width: 623px; height: 60px; }
 .organizers__amp {
   font-family: var(--font-display);
   font-weight: 900;
