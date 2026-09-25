@@ -6,13 +6,14 @@
 
 :root {
   /* Colors */
-  --red: #b3121f;
+  --red: #E2001B;
+   --red-Footer: #D91828;
   --red-dark: #6e0a10;
   --near-black: #1a0a0a;
   --orange: #f26b21;
   --orange-dark: #c94f10;
   --white: #ffffff;
-  --grey-text: #6b6b6b;
+  --grey-text: #777474;
   --grey-light: #f2f2f2;
 
   /* Type */
