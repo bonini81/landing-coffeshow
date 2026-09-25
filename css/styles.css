@@ -1,7 +1,7 @@
 /* ==========================================================================
    Coffee Show 2027 — styles
-   Design tokens live in :root. Swap --font-display once the real brand
-   font is available; swap the images in assets/img (see README there).
+   Design tokens live in :root. Swap the images in assets/img (see README
+   there); font is Onest (Google Fonts), loaded in index.html <head>.
    ========================================================================== */
 
 :root {
@@ -16,8 +16,8 @@
   --grey-light: #f2f2f2;
 
   /* Type */
-  --font-display: 'Montserrat', 'Arial Black', sans-serif;
-  --font-body: 'Montserrat', Arial, sans-serif;
+  --font-display: 'Onest', 'Arial Black', sans-serif;
+  --font-body: 'Onest', Arial, sans-serif;
 
   /* Layout */
   --max-width: 1100px;
