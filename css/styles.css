@@ -149,11 +149,14 @@ img.img-missing { display: none; }
   background: var(--near-black);
   overflow: hidden;
   padding: 48px 0 40px;
+  height: 960px;
 }
 .hero__bg {
   position: absolute;
   inset: 0;
-  background: radial-gradient(120% 100% at 20% 30%, var(--red) 0%, var(--red-dark) 55%, var(--near-black) 100%);
+  background: url("../assets/img/Hero1.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
   z-index: 0;
 }
 
