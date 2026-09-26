@@ -9,6 +9,7 @@
   --red: #E2001B;
    --red-Footer: #D91828;
   --red-dark: #6e0a10;
+  --red-dark2: #8A0102;
   --near-black: #1a0a0a;
   --orange: #f26b21;
   --orange-dark: #c94f10;
@@ -67,10 +68,10 @@ a { text-decoration: none; color: inherit; }
 }
 
 .eyebrow {
-  font-size: 0.75rem;
+  font-size: 1rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 800;
 }
 
 /* ---------- Buttons ---------- */
@@ -79,7 +80,7 @@ a { text-decoration: none; color: inherit; }
   padding: 14px 36px;
   border-radius: 999px;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 1.4rem;
   text-transform: none;
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
@@ -261,7 +262,7 @@ img.img-missing { display: none; }
 .strip__text {
   text-align: center;
   color: var(--white);
-  font-size: 0.75rem;
+  font-size: 0.9rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   font-weight: 700;
@@ -300,8 +301,8 @@ img.img-missing { display: none; }
 .program__title {
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: clamp(1.4rem, 4vw, 2rem);
-  line-height: 1.3;
+  font-size: clamp(2.5rem, 4vw, 2rem);
+  line-height: 1;
 }
 
 .program__subtitle {
@@ -309,7 +310,7 @@ img.img-missing { display: none; }
   margin: 16px auto 0;
   color: var(--grey-text);
   font-size: 0.9rem;
-  line-height: 1.6;
+  line-height: 1.2;
 }
 
 .program__lips {
@@ -325,26 +326,27 @@ img.img-missing { display: none; }
 .day__title {
   font-family: var(--font-display);
   font-weight: 900;
-  font-size: clamp(1.5rem, 5vw, 2rem);
+  font-size: clamp(3rem, 5vw, 2rem);
   text-transform: uppercase;
   display: inline-block;
   position: relative;
-  padding-bottom: 10px;
+  padding-bottom: 0px;
 }
 .day__title--sat, .day__title--sun { color: var(--red); }
 .day__title::after {
   content: '';
   position: absolute;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   bottom: 0;
-  width: 60%;
-  height: 3px;
+  width: 30%;
+  height: 2px;
   background: var(--red);
 }
 
 .day__price {
   margin-top: 8px;
-  font-size: 0.85rem;
+  font-size: 1.2rem; 
   color: var(--near-black);
 }
 .day__price strong { font-size: 1rem; }
@@ -370,14 +372,14 @@ img.img-missing { display: none; }
 
 .artist__name {
   margin-top: 10px;
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.02em;
 }
 
 .day .btn { margin-top: 28px; }
-.day__buenplan { width: 110px; margin: 18px auto 0; }
+.day__buenplan { width: 128px; margin: 18px auto 0; }
 
 @media (min-width: 900px) {
   .program__days {
@@ -406,7 +408,7 @@ img.img-missing { display: none; }
   background-image: url("../assets/img/Hero2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 56px 0;
+  padding: 76px 0;
   overflow: hidden;
 }
 
@@ -447,7 +449,7 @@ img.img-missing { display: none; }
   gap: 32px;
 }
 
-.experience__logo { width: 180px; }
+.experience__logo { width: 280px; }
 .experience__edition {
   margin-top: 4px;
   font-size: 0.65rem;
@@ -462,7 +464,7 @@ img.img-missing { display: none; }
   align-items: center;
   gap: 8px;
 }
-.experience__sponsor .img-wrap { width: 130px; }
+.experience__sponsor .img-wrap { width: 230px; }
 
 .social {
   display: flex;
@@ -473,7 +475,7 @@ img.img-missing { display: none; }
   height: 44px;
   border-radius: 50%;
   background: var(--white);
-  color: var(--red);
+  color: var(--red-dark2);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -533,7 +535,7 @@ img.img-missing { display: none; }
 }
 .footer p {
   color: var(--white);
-  font-size: 0.75rem;
+  font-size: 1rem;
   font-weight: 700;
   letter-spacing: 0.03em;
 }
