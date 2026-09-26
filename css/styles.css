@@ -482,7 +482,7 @@ img.img-missing { display: none; }
 .social__icon:hover { transform: translateY(-3px); }
 
 @media (min-width: 768px) {
-  .experience__inner { text-align: left; align-items: flex-start; }
+  .experience__inner { text-align: left; align-items: flex-end; }
   .experience__brands { justify-content: flex-start; }
 }
 
