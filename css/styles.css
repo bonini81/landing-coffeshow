@@ -383,7 +383,7 @@ img.img-missing { display: none; }
   .program__days {
     background-image: url("../assets/img/fondo-coffeeShow.jpg");
     background-repeat: no-repeat;
-    background-position: top;
+    background-position: center;
     background-size: cover;
     grid-template-columns: 1fr 1fr;
     gap: 64px;
@@ -403,7 +403,9 @@ img.img-missing { display: none; }
    ========================================================================== */
 .experience {
   position: relative;
-  background: linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%);
+  background-image: url("../assets/img/Hero2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   padding: 56px 0;
   overflow: hidden;
 }
