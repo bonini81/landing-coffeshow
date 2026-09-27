@@ -176,14 +176,17 @@ img.img-missing { display: none; }
   position: relative;
   z-index: 2;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   align-items: center;
   gap: 32px;
   text-align: center;
 }
 
-.hero__media { width: 100%; max-width: 320px; }
-.hero__cup { border-radius: 50%; overflow: hidden; }
+/* Mobile: sponsor, then main content, then tagline (side is unwrapped) */
+.hero__side { display: contents; }
+.hero__side .hero__sponsor { order: 0; }
+.hero__content { order: 1; }
+.hero__side .hero__tagline { order: 2; }
 
 .hero__content {
   width: 100%;
@@ -237,19 +240,26 @@ img.img-missing { display: none; }
   letter-spacing: 0.15em;
   text-transform: uppercase;
   font-weight: 700;
-  margin-top: 32px;
 }
 
 @media (min-width: 768px) {
   .hero { padding: 72px 0 56px; }
   .hero__inner {
     flex-direction: row;
+    align-items: stretch;
     text-align: left;
     gap: 48px;
   }
-  .hero__content { align-items: center; }
-  .hero__media { max-width: 380px; }
-  .hero__tagline { text-align: left; padding-left: 20px; }
+  /* Left column: sponsor above the cup, tagline below it (cup is in the bg image) */
+  .hero__side {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex: 1;
+  }
+  .hero__content { flex: 1; align-items: center; }
+  .hero__tagline { text-align: left; }
   .hero__lips { width: 300px; }
 }
 
