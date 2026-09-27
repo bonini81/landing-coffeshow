@@ -216,6 +216,7 @@ img.img-missing { display: none; }
   font-weight: 900;
   font-size: clamp(1.8rem, 6vw, 2.5rem);
   line-height: 1.1;
+  margin-top: 16px;
 }
 .hero__venue {
   font-family: var(--font-display);
@@ -246,7 +247,7 @@ img.img-missing { display: none; }
     text-align: left;
     gap: 48px;
   }
-  .hero__content { align-items: flex-start; }
+  .hero__content { align-items: center; }
   .hero__media { max-width: 380px; }
   .hero__tagline { text-align: left; padding-left: 20px; }
   .hero__lips { width: 300px; }
@@ -434,6 +435,13 @@ img.img-missing { display: none; }
   gap: 28px;
 }
 
+.experience__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+}
+
 .experience__title {
   font-family: var(--font-display);
   font-weight: 800;
@@ -484,8 +492,7 @@ img.img-missing { display: none; }
 .social__icon:hover { transform: translateY(-3px); }
 
 @media (min-width: 768px) {
-  .experience__inner { text-align: left; align-items: flex-end; }
-  .experience__brands { justify-content: flex-start; }
+  .experience__inner { align-items: flex-end; }
 }
 
 /* ==========================================================================
