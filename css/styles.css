@@ -277,8 +277,10 @@ img.img-missing { display: none; }
    CATEGORY STRIP
    ========================================================================== */
 .strip {
+  position: relative;
   background: var(--black);
   padding: 16px 20px;
+  overflow: visible;
 }
 .strip__text {
   text-align: center;
@@ -289,6 +291,20 @@ img.img-missing { display: none; }
   font-weight: 700;
 }
 .strip__text .dot { color: var(--white); margin: 0 6px; }
+
+.strip__kiss {
+  position: absolute;
+  right: 24px;
+  top: -40px;
+  width: 90px;
+  z-index: 2;
+  pointer-events: none;
+}
+.strip__kiss.img-missing { display: none; }
+
+@media (min-width: 768px) {
+  .strip__kiss { right: 40px; width: 130px; top: -60px; }
+}
 
 /* ==========================================================================
    PROGRAM
