@@ -212,7 +212,7 @@ img.img-missing { display: none; }
   align-items: center;
   gap: 10px;
 }
-.hero__sponsor-logo { width: 120px; }
+.hero__sponsor-logo { width: 300px; }
 
 .hero__edition {
   font-size: 0.8rem;
@@ -227,19 +227,19 @@ img.img-missing { display: none; }
 .hero__dates {
   font-family: var(--font-display);
   font-weight: 900;
-  font-size: clamp(1.8rem, 6vw, 2.5rem);
+  font-size: clamp(2.2rem, 6vw, 3.5rem);
   line-height: 1.1;
   margin-top: 16px;
 }
 .hero__venue {
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: clamp(1.2rem, 4vw, 1.6rem);
+  font-size: clamp(1.5rem, 4vw, 2.7rem);
   letter-spacing: 0.05em;
-  margin-bottom: 6px;
+  margin-bottom: 25px;
 }
 
-.hero__buenplan { width: 120px; margin-top: 6px; }
+.hero__buenplan { width: 200px; margin-top: 36px; }
 
 .hero__tagline {
   position: relative;
