@@ -11,6 +11,7 @@
   --red-dark: #6e0a10;
   --red-dark2: #8A0102;
   --near-black: #1a0a0a;
+  --black: #000;
   --orange: #f26b21;
   --orange-dark: #c94f10;
   --white: #ffffff;
@@ -268,7 +269,7 @@ img.img-missing { display: none; }
    CATEGORY STRIP
    ========================================================================== */
 .strip {
-  background: var(--near-black);
+  background: var(--black);
   padding: 16px 20px;
 }
 .strip__text {
