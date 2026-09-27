@@ -76,6 +76,14 @@ a { text-decoration: none; color: inherit; }
   font-weight: 800;
 }
 
+.eyebrow-black {
+  color: black;
+  font-size: 1rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
 /* ---------- Buttons ---------- */
 .btn {
   display: inline-block;
