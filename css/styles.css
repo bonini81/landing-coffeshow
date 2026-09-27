@@ -265,7 +265,7 @@ img.img-missing { display: none; }
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     flex: 1;
   }
   .hero__content { flex: 1; align-items: center; }
@@ -524,7 +524,7 @@ img.img-missing { display: none; }
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 28px 40px;
+  gap: 8px 5px;
 }
 .sponsors__logo { width: 110px; }
 .sponsors__logo img { max-height: 94px; width: auto; margin: 0 auto; object-fit: contain; }
