@@ -239,7 +239,7 @@ img.img-missing { display: none; }
   margin-bottom: 25px;
 }
 
-.hero__buenplan { width: 200px; margin-top: 36px; }
+.hero__buenplan { width: 200px; margin-top: 32px; }
 
 .hero__tagline {
   position: relative;
@@ -292,7 +292,8 @@ img.img-missing { display: none; }
     transform: translateX(-50%);
     text-align: center;
   }
-  .hero__content { flex: 1; align-items: center; justify-content: space-between; }
+  .hero__content { flex: 1; align-items: center; gap: 45px; }
+  .hero__buenplan { margin-top: 28%; }
   .hero__lips { width: 300px; }
 }
 
