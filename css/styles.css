@@ -161,7 +161,7 @@ img.img-missing { display: none; }
   background: var(--near-black);
   overflow: hidden;
   padding: 48px 0 40px;
-  height: 960px;
+  height: 100%;
 }
 .hero__bg {
   position: absolute;
@@ -253,7 +253,7 @@ img.img-missing { display: none; }
 }
 
 @media (min-width: 768px) {
-  .hero { padding: 72px 0 56px; }
+  .hero { height: 960px; padding: 72px 0 56px; }
   .hero__bg { background-image: url("../assets/img/Hero1.jpg"); }
   .hero__inner {
     /* Fill the hero's full content-box height (not just what the right
@@ -308,7 +308,7 @@ img.img-missing { display: none; }
 .strip__text {
   text-align: center;
   color: var(--white);
-  font-size: 0.9rem;
+  font-size: clamp(0.3rem, 5vw, 0.9rem);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   font-weight: 700;
@@ -317,7 +317,7 @@ img.img-missing { display: none; }
 
 .strip__kiss {
   position: absolute;
-  right: -34px;
+  right: -44px;
   top: -40px;
   width: 90px;
   z-index: 2;
