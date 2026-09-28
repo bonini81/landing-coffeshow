@@ -338,7 +338,7 @@ img.img-missing { display: none; }
 .program__title {
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: clamp(2.5rem, 4vw, 2rem);
+  font-size: clamp(1.8rem, 4vw, 2rem);
   line-height: 1;
 }
 
@@ -363,7 +363,7 @@ img.img-missing { display: none; }
 .day__title {
   font-family: var(--font-display);
   font-weight: 900;
-  font-size: clamp(3rem, 5vw, 2rem);
+  font-size: clamp(2.1rem, 5vw, 2.5rem);
   text-transform: uppercase;
   display: inline-block;
   position: relative;
@@ -456,9 +456,32 @@ img.img-missing { display: none; }
   transform: translateY(-50%);
   width: 220px;
   opacity: 0.9;
-  z-index: 0;
+  z-index: 1;
 }
 .experience__portafilter.img-missing { display: none; }
+
+/* Sits between .program and .experience with no overflow of its own, so the
+   kiss image can straddle the boundary without being clipped by either
+   section's overflow: hidden. */
+.section-seam {
+  position: relative;
+  height: 0;
+}
+
+.experience__kiss {
+  position: absolute;
+  left: 24px;
+  top: -40px;
+  width: 90px;
+  z-index: 5;
+  transform: rotate(-15deg);
+  pointer-events: none;
+}
+.experience__kiss.img-missing { display: none; }
+
+@media (min-width: 768px) {
+  .experience__kiss { left: 48px; width: 130px; top: -60px; }
+}
 
 .experience__inner {
   position: relative;
