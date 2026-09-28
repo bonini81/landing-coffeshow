@@ -90,7 +90,7 @@ a { text-decoration: none; color: inherit; }
   padding: 14px 36px;
   border-radius: 999px;
   font-weight: 700;
-  font-size: 1.4rem;
+  font-size: clamp(1rem, 5vw, 1.4rem);
   text-transform: none;
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
