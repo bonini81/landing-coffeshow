@@ -166,7 +166,7 @@ img.img-missing { display: none; }
 .hero__bg {
   position: absolute;
   inset: 0;
-  background: url("../assets/img/Hero1.jpg") no-repeat;
+  background: url("../assets/img/Hero1-mobile.jpg") no-repeat;
   background-position: center;
   background-size: cover;
   z-index: 0;
@@ -254,13 +254,16 @@ img.img-missing { display: none; }
 
 @media (min-width: 768px) {
   .hero { padding: 72px 0 56px; }
+  .hero__bg { background-image: url("../assets/img/Hero1.jpg"); }
   .hero__inner {
     flex-direction: row;
     align-items: stretch;
     text-align: left;
     gap: 48px;
   }
-  /* Left column: sponsor above the cup, tagline below it (cup is in the bg image) */
+  /* Left column: sponsor logo + tagline are baked into the bg image now, so
+     .hero__side just reserves the layout space; its content is visually hidden
+     but stays in the DOM for accessibility/SEO. */
   .hero__side {
     display: flex;
     flex-direction: column;
@@ -268,8 +271,17 @@ img.img-missing { display: none; }
     align-items: center;
     flex: 1;
   }
+  .hero__side .hero__sponsor,
+  .hero__side .hero__tagline {
+    position: absolute;
+    width: 1px; height: 1px;
+    padding: 0; margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border: 0;
+  }
   .hero__content { flex: 1; align-items: center; }
-  .hero__tagline { text-align: left; }
   .hero__lips { width: 300px; }
 }
 
