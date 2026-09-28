@@ -253,7 +253,7 @@ img.img-missing { display: none; }
 }
 
 @media (min-width: 768px) {
-  .hero { height: 960px; padding: 72px 0 56px; }
+  .hero { height: 760px; padding: 42px 0 42px; }
   .hero__bg { background-image: url("../assets/img/Hero1.jpg"); }
   .hero__inner {
     /* Fill the hero's full content-box height (not just what the right
@@ -293,7 +293,7 @@ img.img-missing { display: none; }
     text-align: center;
   }
   .hero__content { flex: 1; align-items: center; gap: 45px; }
-  .hero__buenplan { margin-top: 28%; }
+  
   .hero__lips { width: 300px; }
 }
 
