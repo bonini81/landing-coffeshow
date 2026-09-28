@@ -442,9 +442,10 @@ img.img-missing { display: none; }
    ========================================================================== */
 .experience {
   position: relative;
-  background-image: url("../assets/img/Hero2.jpg");
+  background-image: url("../assets/img/Hero2--mobile.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   padding: 76px 0;
   overflow: hidden;
 }
@@ -551,6 +552,7 @@ img.img-missing { display: none; }
 .social__icon:hover { transform: translateY(-3px); }
 
 @media (min-width: 768px) {
+  .experience { background-image: url("../assets/img/Hero2.jpg"); }
   .experience__inner { align-items: flex-end; }
 }
 
