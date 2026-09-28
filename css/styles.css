@@ -308,7 +308,7 @@ img.img-missing { display: none; }
 .strip__text {
   text-align: center;
   color: var(--white);
-  font-size: 0.9rem;
+  font-size: clamp(0.3rem, 5vw, 0.9rem);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   font-weight: 700;
