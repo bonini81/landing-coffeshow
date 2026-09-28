@@ -281,18 +281,18 @@ img.img-missing { display: none; }
   }
   .hero__side .hero__sponsor {
     position: absolute;
-    top: 4%;
+    top: 0;
     left: 50%;
     transform: translateX(-50%);
   }
   .hero__side .hero__tagline {
     position: absolute;
-    bottom: 10%;
+    bottom: 1%;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
   }
-  .hero__content { flex: 1; align-items: center; }
+  .hero__content { flex: 1; align-items: center; justify-content: space-between; }
   .hero__lips { width: 300px; }
 }
 
