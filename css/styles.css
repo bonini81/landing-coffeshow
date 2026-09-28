@@ -256,30 +256,41 @@ img.img-missing { display: none; }
   .hero { padding: 72px 0 56px; }
   .hero__bg { background-image: url("../assets/img/Hero1.jpg"); }
   .hero__inner {
+    /* Fill the hero's full content-box height (not just what the right
+       column's content needs) so the left column's top/bottom % below can
+       be measured against the whole bg image, not a shorter shrink-wrapped
+       box — otherwise "below the cup" drifts onto the cup itself. */
+    height: 100%;
     flex-direction: row;
     align-items: stretch;
     text-align: left;
     gap: 48px;
   }
-  /* Left column: sponsor logo + tagline are baked into the bg image now, so
-     .hero__side just reserves the layout space; its content is visually hidden
-     but stays in the DOM for accessibility/SEO. */
+  /* Left column: the cup lives in the bg image, so sponsor logo + tagline are
+     pinned on top of it (approximate cup position, tune the top/bottom %
+     once checked against real viewport widths). */
   .hero__side {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    flex: 1;
+    /* Undo the mobile display:contents trick — it needs a real box here so
+       position/flex actually apply to it and not to .hero__inner instead. */
+    display: block;
+    position: relative;
+    /* Fixed share of the row (not flex:1) so it can't get squeezed down by
+       .hero__content's own content — its width has to track roughly where
+       the cup sits in the bg image, not shrink to whatever's left over. */
+    flex: 0 0 41.5%;
   }
-  .hero__side .hero__sponsor,
+  .hero__side .hero__sponsor {
+    position: absolute;
+    top: 4%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
   .hero__side .hero__tagline {
     position: absolute;
-    width: 1px; height: 1px;
-    padding: 0; margin: -1px;
-    overflow: hidden;
-    clip: rect(0,0,0,0);
-    white-space: nowrap;
-    border: 0;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
   }
   .hero__content { flex: 1; align-items: center; }
   .hero__lips { width: 300px; }
