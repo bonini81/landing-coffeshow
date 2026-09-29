@@ -609,6 +609,20 @@ img.img-missing { display: none; }
 }
 .social__icon:hover { transform: translateY(-3px); }
 
+/* Mobile: title on top, logo + sponsor side by side, socials centered below */
+@media (max-width: 767px) {
+  .experience__content { width: 100%; }
+  .experience__brands {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 100%;
+    gap: 16px;
+  }
+  .experience__logo { width: 46%; }
+  .experience__sponsor { width: 42%; }
+  .experience__sponsor .img-wrap { width: 100%; }
+}
+
 @media (min-width: 768px) {
   .experience { background-image: url("../assets/img/Hero2.jpg"); }
   .experience__inner { align-items: flex-end; }
