@@ -175,54 +175,66 @@ img.img-missing { display: none; }
 
 .hero__lips {
   position: absolute;
-  right: -40px;
-  bottom: -30px;
-  width: 220px;
+  right: -50px;
+  top: 12%;
+  width: 180px;
   z-index: 1;
   pointer-events: none;
 }
 .hero__lips.img-missing { display: none; }
 
+/* Mobile: poster layout. Sponsor top-left, edition top-right, the cup lives in
+   the bg image (empty 1fr row), then logo / dates / button, and a bottom row
+   with tagline left + buenplan right. .hero__side and .hero__content are
+   unwrapped (display: contents) so every piece is a direct grid item. */
 .hero__inner {
   position: relative;
   z-index: 2;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto 1fr auto auto auto auto;
+  grid-template-areas:
+    "sponsor edition"
+    "cup     cup"
+    "logo    logo"
+    "dates   dates"
+    "cta     cta"
+    "tagline buenplan";
   align-items: center;
-  gap: 32px;
+  column-gap: 12px;
+  row-gap: 12px;
   text-align: center;
+  min-height: 135vw;
 }
+.hero__side,
+.hero__content { display: contents; }
 
-/* Mobile: sponsor, then main content, then tagline (side is unwrapped) */
-.hero__side { display: contents; }
-.hero__side .hero__sponsor { order: 0; }
-.hero__content { order: 1; }
-.hero__side .hero__tagline { order: 2; }
+.hero__sponsor { grid-area: sponsor; justify-self: start; }
+.hero__edition { grid-area: edition; justify-self: end; }
+.hero__logo { grid-area: logo; justify-self: center; }
+.hero__dates { grid-area: dates; }
+.hero__content .btn { grid-area: cta; justify-self: center; margin-bottom: 20px; }
+.hero__side .hero__tagline { grid-area: tagline; text-align: left; }
+.hero__buenplan { grid-area: buenplan; justify-self: end; }
 
-.hero__content {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 14px;
-  color: var(--white);
-}
+.hero__content { color: var(--white); }
 
 .hero__sponsor {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-.hero__sponsor-logo { width: 300px; }
+.hero__sponsor-logo { width: min(150px, 38vw); }
 
 .hero__edition {
-  font-size: 0.8rem;
+  color: var(--white);
+  font-size: 0.65rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   font-weight: 700;
 }
 
-.hero__logo { width: min(320px, 80vw); margin: 6px 0; }
+.hero__logo { width: min(240px, 80vw); margin: 6px 0; }
 .hero__logo img { font-size: 1.5rem; }
 
 .hero__dates {
@@ -240,7 +252,7 @@ img.img-missing { display: none; }
   margin-bottom: 25px;
 }
 
-.hero__buenplan { width: 200px; margin-top: 32px; }
+.hero__buenplan { width: min(130px, 34vw); }
 
 .hero__tagline {
   position: relative;
@@ -256,7 +268,14 @@ img.img-missing { display: none; }
 @media (min-width: 768px) {
   .hero { height: 760px; padding: 42px 0 42px; }
   .hero__bg { background-image: url("../assets/img/Hero1.jpg"); }
+  .hero__logo { width: min(320px, 80vw); margin: 6px 0; }
+  .hero__edition { display: none; }
+  .hero__sponsor-logo { width: 300px; }
+  .hero__buenplan { width: 200px; margin-top: 32px; }
+  .hero__content .btn { margin-bottom: 0; }
   .hero__inner {
+    display: flex;
+    min-height: 0;
     /* Fill the hero's full content-box height (not just what the right
        column's content needs) so the left column's top/bottom % below can
        be measured against the whole bg image, not a shorter shrink-wrapped
@@ -294,9 +313,15 @@ img.img-missing { display: none; }
     transform: translateX(-50%);
     text-align: center;
   }
-  .hero__content { flex: 1; align-items: center; gap: 45px; }
+  .hero__content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+    gap: 45px;
+  }
   
-  .hero__lips { width: 300px; }
+  .hero__lips { width: 300px; top: auto; right: -40px; bottom: -30px; }
 
 
 }
