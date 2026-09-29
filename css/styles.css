@@ -383,6 +383,10 @@ img.img-missing { display: none; }
 }
 
 .program__days {
+  background-image: url("../assets/img/fondo-coffeeShow-mobile.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
   margin-top: 48px;
   display: grid;
   gap: 48px;
