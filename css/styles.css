@@ -279,7 +279,7 @@ img.img-missing { display: none; }
     /* Fixed share of the row (not flex:1) so it can't get squeezed down by
        .hero__content's own content — its width has to track roughly where
        the cup sits in the bg image, not shrink to whatever's left over. */
-    flex: 0 0 41.5%;
+    flex: 0 0 45%;
   }
   .hero__side .hero__sponsor {
     position: absolute;
