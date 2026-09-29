@@ -161,7 +161,7 @@ img.img-missing { display: none; }
   position: relative;
   background: var(--near-black);
   overflow: hidden;
-  padding: 48px 0 40px;
+  padding: 20px 0 20px;
   height: 100%;
 }
 .hero__bg {
@@ -201,10 +201,10 @@ img.img-missing { display: none; }
     "cta     cta"
     "tagline buenplan";
   align-items: center;
-  column-gap: 12px;
+  column-gap: 18px;
   row-gap: 12px;
   text-align: center;
-  min-height: 135vw;
+  min-height: 700px;
 }
 .hero__side,
 .hero__content { display: contents; }
@@ -240,7 +240,7 @@ img.img-missing { display: none; }
 .hero__dates {
   font-family: var(--font-display);
   font-weight: 900;
-  font-size: clamp(2.2rem, 6vw, 3.5rem);
+  font-size: clamp(1.8rem, 6vw, 3.5rem);
   line-height: 1.1;
   margin-top: 16px;
 }
@@ -259,7 +259,7 @@ img.img-missing { display: none; }
   z-index: 2;
   text-align: center;
   color: var(--white);
-  font-size: 0.75rem;
+  font-size: 0.55rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   font-weight: 700;
@@ -322,8 +322,7 @@ img.img-missing { display: none; }
   }
   
   .hero__lips { width: 300px; top: auto; right: -40px; bottom: -30px; }
-
-
+  .hero__tagline { font-size: 0.75rem; }
 }
 
 /* ==========================================================================
@@ -503,7 +502,7 @@ img.img-missing { display: none; }
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  padding: 76px 0;
+  padding: 36px 0;
   overflow: hidden;
 }
 
@@ -529,7 +528,7 @@ img.img-missing { display: none; }
 .experience__kiss {
   position: absolute;
   left: -14px;
-  top: -40px;
+  top: -60px;
   width: 90px;
   z-index: 5;
   transform: rotate(-15deg);
@@ -539,6 +538,7 @@ img.img-missing { display: none; }
 
 @media (min-width: 768px) {
   .experience__kiss { left: -14px; width: 130px; top: -60px; }
+  .experience { padding: 76px 0; }
 }
 
 .experience__inner {
@@ -551,6 +551,7 @@ img.img-missing { display: none; }
   flex-direction: column;
   align-items: center;
   gap: 28px;
+  min-height: 500px;
 }
 
 .experience__content {
@@ -625,7 +626,7 @@ img.img-missing { display: none; }
 
 @media (min-width: 768px) {
   .experience { background-image: url("../assets/img/Hero2.jpg"); }
-  .experience__inner { align-items: flex-end; }
+  .experience__inner { align-items: flex-end; min-height: auto; }
 }
 
 /* ==========================================================================
