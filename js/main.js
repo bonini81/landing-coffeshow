@@ -11,9 +11,9 @@
  */
 
 const LINKS = {
-  ticketsGeneral: '#', // botón principal "Comprar Entradas" del hero
-  ticketsSat: '#',     // botón "Comprar Entradas" — Sábado 27 feb
-  ticketsSun: '#',     // botón "Comprar Entradas" — Domingo 28 feb
+  ticketsGeneral: 'https://www.buenplan.com.ec/event/coffee-show-supermaxi', // botón principal "Comprar Entradas" del hero
+  ticketsSat: 'https://www.buenplan.com.ec/event/coffee-show-supermaxi',     // botón "Comprar Entradas" — Sábado 27 feb
+  ticketsSun: 'https://www.buenplan.com.ec/event/coffee-show-supermaxi',     // botón "Comprar Entradas" — Domingo 28 feb
   instagram: '#',
   tiktok: '#',
   facebook: '#',
