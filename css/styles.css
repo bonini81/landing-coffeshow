@@ -23,7 +23,8 @@
   --font-body: 'Onest', Arial, sans-serif;
 
   /* Layout */
-  --max-width: 1100px;
+  --max-width: 1300px;
+  --middle-width: 1100px;
   --radius-md: 12px;
   --radius-lg: 20px;
 }
@@ -87,10 +88,10 @@ a { text-decoration: none; color: inherit; }
 /* ---------- Buttons ---------- */
 .btn {
   display: inline-block;
-  padding: 14px 36px;
+  padding: 10px 25px;
   border-radius: 999px;
   font-weight: 700;
-  font-size: clamp(1rem, 5vw, 1.4rem);
+  font-size: clamp(0.7rem, 5vw, 1rem);
   text-transform: none;
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
@@ -253,7 +254,7 @@ img.img-missing { display: none; }
 }
 
 @media (min-width: 768px) {
-  .hero { height: 960px; padding: 72px 0 56px; }
+  .hero { height: 760px; padding: 42px 0 42px; }
   .hero__bg { background-image: url("../assets/img/Hero1.jpg"); }
   .hero__inner {
     /* Fill the hero's full content-box height (not just what the right
@@ -293,8 +294,10 @@ img.img-missing { display: none; }
     text-align: center;
   }
   .hero__content { flex: 1; align-items: center; gap: 45px; }
-  .hero__buenplan { margin-top: 28%; }
+  
   .hero__lips { width: 300px; }
+
+
 }
 
 /* ==========================================================================
@@ -449,7 +452,7 @@ img.img-missing { display: none; }
     background-position: center;
     background-size: cover;
     grid-template-columns: 1fr 1fr;
-    gap: 64px;
+    gap: 75px;
   }
   .program__lips {
     display: block;
@@ -509,6 +512,7 @@ img.img-missing { display: none; }
 }
 
 .experience__inner {
+  max-width: var(--middle-width);
   position: relative;
   z-index: 1;
   text-align: center;
@@ -585,14 +589,31 @@ img.img-missing { display: none; }
    ========================================================================== */
 .sponsors { padding: 56px 20px; }
 .sponsors__grid {
+  /* Flex, not grid: every logo gets the same fixed-size cell (still fixes
+     the raw intrinsic-width raggedness), but flex-wrap + justify-content
+     center an incomplete last row — grid's auto-fit leaves trailing empty
+     tracks start-aligned instead, which is the gap you spotted. */
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px 10px;
+}
+.sponsors__logo {
+  flex: 0 0 130px;
+  width: 130px;
+  height: 72px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px 5px;
 }
-.sponsors__logo { width: 110px; }
-.sponsors__logo img { max-height: 94px; width: auto; margin: 0 auto; object-fit: contain; }
+.sponsors__logo img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  margin: 0;
+}
 
 /* ==========================================================================
    ORGANIZERS
