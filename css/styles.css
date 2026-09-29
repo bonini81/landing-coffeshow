@@ -266,6 +266,7 @@ img.img-missing { display: none; }
     align-items: stretch;
     text-align: left;
     gap: 48px;
+    max-width: var(--middle-width);
   }
   /* Left column: the cup lives in the bg image, so sponsor logo + tagline are
      pinned on top of it (approximate cup position, tune the top/bottom %
@@ -288,7 +289,7 @@ img.img-missing { display: none; }
   }
   .hero__side .hero__tagline {
     position: absolute;
-    bottom: 1%;
+    bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
@@ -452,7 +453,7 @@ img.img-missing { display: none; }
     background-position: center;
     background-size: cover;
     grid-template-columns: 1fr 1fr;
-    gap: 75px;
+    gap: 80px;
   }
   .program__lips {
     display: block;
@@ -596,12 +597,12 @@ img.img-missing { display: none; }
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 25px 10px;
+  gap: 15px 10px;
 }
 .sponsors__logo {
-  flex: 0 0 130px;
-  width: 130px;
-  height: 72px;
+  flex: 0 0 100px;
+  width: 100px;
+  height: 84px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -614,6 +615,25 @@ img.img-missing { display: none; }
   object-fit: contain;
   margin: 0;
 }
+
+@media (min-width: 768px) {
+.sponsors__logo {
+  flex: 0 0 120px;
+  width: 120px;
+  height: 84px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  }
+
+  .sponsors__grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px 15px;
+  }
+}
+
 
 /* ==========================================================================
    ORGANIZERS
