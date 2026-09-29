@@ -346,8 +346,8 @@ img.img-missing { display: none; }
 
 .strip__kiss {
   position: absolute;
-  right: -44px;
-  top: -40px;
+  right: -60px;
+  top: -30px;
   width: 90px;
   z-index: 2;
   pointer-events: none;
@@ -355,7 +355,7 @@ img.img-missing { display: none; }
 .strip__kiss.img-missing { display: none; }
 
 @media (min-width: 768px) {
-  .strip__kiss { right: -14px; width: 130px; top: -60px; }
+  .strip__kiss { right: -34px; width: 130px; top: -60px; }
 }
 
 /* ==========================================================================
