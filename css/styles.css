@@ -232,11 +232,11 @@ img.img-missing { display: none; }
   align-items: center;
   gap: 10px;
 }
-.hero__sponsor-logo { width: min(150px, 38vw); }
+.hero__sponsor-logo { width: 190px; }
 
 .hero__edition {
   color: var(--white);
-  font-size: 0.65rem;
+  font-size: 0.53rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   font-weight: 700;
@@ -278,7 +278,7 @@ img.img-missing { display: none; }
   .hero__bg { background-image: url("../assets/img/Hero1.jpg"); }
   .hero__logo { width: min(320px, 80vw); margin: 6px 0; }
   .hero__edition { display: none; }
-  .hero__sponsor-logo { width: 300px; }
+  .hero__sponsor-logo { width: 312px; }
   .hero__buenplan { width: 200px; margin-top: 32px; }
   .hero__content .btn { margin-bottom: 0; }
   .hero__inner {
