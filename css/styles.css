@@ -31,13 +31,21 @@
 
 /* ---------- Reset ---------- */
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+/* The decorative beans/lips use negative offsets and poke past the viewport.
+   overflow-x on body alone isn't reliable on mobile, so set it on html too;
+   `clip` (hidden as fallback) avoids creating a scroll container. */
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  overflow-x: clip;
+}
 body {
   margin: 0;
   font-family: var(--font-body);
   color: var(--near-black);
   background: var(--white);
   overflow-x: hidden;
+  overflow-x: clip;
 }
 img { max-width: 100%; display: block; }
 h1, h2, h3, p { margin: 0; }
