@@ -23,7 +23,7 @@
   --font-body: 'Onest', Arial, sans-serif;
 
   /* Layout */
-  --max-width: 1300px;
+  --max-width: 1400px;
   --middle-width: 1100px;
   --radius-md: 12px;
   --radius-lg: 20px;
@@ -259,7 +259,7 @@ img.img-missing { display: none; }
   z-index: 2;
   text-align: center;
   color: var(--white);
-  font-size: 0.55rem;
+  font-size: 0.50rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   font-weight: 700;
@@ -638,43 +638,76 @@ img.img-missing { display: none; }
      the raw intrinsic-width raggedness), but flex-wrap + justify-content
      center an incomplete last row — grid's auto-fit leaves trailing empty
      tracks start-aligned instead, which is the gap you spotted. */
+  /* Logos are sized by HEIGHT (--logo-h) and keep their aspect ratio, so wide
+     logos (Mazda, Juan Valdez, Dentonomy...) look as big as square ones
+     instead of being squeezed into a fixed-width cell. */
+  --logo-h: 60px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 15px 10px;
+  align-items: center;
+  gap: 15px 20px;
 }
 .sponsors__logo {
-  flex: 0 0 100px;
-  width: 100px;
-  height: 84px;
+  flex: 0 0 auto;
+  height: var(--logo-h);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .sponsors__logo img {
-  max-width: 100%;
-  max-height: 100%;
+  height: var(--logo-h);
   width: auto;
-  height: auto;
+  max-width: none;
   object-fit: contain;
   margin: 0;
 }
+/* Cosecha Roja's file is only 48px tall (vs 94 for the rest): scale to match */
+.sponsors__logo img[height="48"] { height: calc(var(--logo-h) * 0.51); }
+
+/* The forced-break spacer only exists for the wide-desktop 7/10 layout;
+   elsewhere it would occupy a slot in the row (and a gap), so hide it. */
+.sponsors__break { display: none; }
+
+/* Mobile: tidy 3-column grid. Equal cells, logos contained inside them, so
+   rows line up (the last row of 2 stays centered). */
+@media (max-width: 767px) {
+  .sponsors__grid { gap: 22px 12px; }
+  .sponsors__logo {
+    flex: 0 0 calc((100% - 2 * 12px - 1px) / 3);
+    width: calc((100% - 2 * 12px - 1px) / 3);
+    height: 84px;
+  }
+  .sponsors__logo img,
+  .sponsors__logo img[height="48"] {
+    width: auto;
+    height: auto;
+    max-width: 90%;
+    max-height: 100%;
+  }
+}
 
 @media (min-width: 768px) {
-.sponsors__logo {
-  flex: 0 0 120px;
-  width: 120px;
-  height: 84px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  }
-
   .sponsors__grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 25px 15px;
+    --logo-h: 94px;
+    gap: 25px 15px;
+  }
+}
+
+/* Wide desktop: forced 7 logos on the first row (break after the 7th in the
+   HTML), the remaining 10 on the second. Height scales with the viewport so
+   the 10 natural-width logos still fit on one line. */
+@media (min-width: 1200px) {
+  .sponsors__grid {
+    --logo-h: min(94px, 7.2vw);
+    max-width: 1400px;
+    margin-inline: auto;
+  }
+  .sponsors__break {
+    display: block;
+    flex: 0 0 100%;
+    height: 0;
+    margin-top: -25px; /* cancels one of the two row gaps around the break */
   }
 }
 
