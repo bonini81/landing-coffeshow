@@ -320,6 +320,7 @@ img.img-missing { display: none; }
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
+    width: 100%;
   }
   .hero__content {
     display: flex;
