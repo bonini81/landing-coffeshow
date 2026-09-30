@@ -699,7 +699,7 @@ img.img-missing { display: none; }
 @media (min-width: 768px) {
   .sponsors__grid {
     --logo-h: 94px;
-    gap: 25px 15px;
+    gap: 25px 40px;
   }
 }
 
