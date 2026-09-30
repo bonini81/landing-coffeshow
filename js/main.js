@@ -14,9 +14,9 @@ const LINKS = {
   ticketsGeneral: 'https://www.buenplan.com.ec/event/coffee-show-supermaxi', // botón principal "Comprar Entradas" del hero
   ticketsSat: 'https://www.buenplan.com.ec/event/coffee-show-supermaxi',     // botón "Comprar Entradas" — Sábado 27 feb
   ticketsSun: 'https://www.buenplan.com.ec/event/coffee-show-supermaxi',     // botón "Comprar Entradas" — Domingo 28 feb
-  instagram: '#',
-  tiktok: '#',
-  facebook: '#',
+  instagram: 'https://www.instagram.com/coffeeshowec/',
+  tiktok: 'https://www.tiktok.com/@coffeeshowec',
+  facebook: 'https://www.facebook.com/CoffeeShowEc/',
 };
 
 (function wireLinks() {
